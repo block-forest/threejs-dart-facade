@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'dart:math' as Math;
-import 'package:threejs/src/three/three.d.dart';
+import 'package:threejs_facade/three.dart';
 
 Math.Random rand = new Math.Random();
 
