@@ -9,4 +9,7 @@ dependencies:
   func: ^0.1.0
   js: ^0.6.0
 dev_dependencies:
-  browser: ^0.10.0+2
+  #-------- Dart 2.0.0-dev --------
+  build_runner: ^0.8.9
+  build_test: ^0.10.2
+  build_web_compilers: ^0.4.0+3

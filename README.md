@@ -1,31 +1,35 @@
 # THREE.js Dart Interop Facade
 
-# Disclaimer
+This is a Dart JS interop facade for the THREE.js 3D library. 
 
-This is a Dart JS interop facade generated with [dts-converter](https://github.com/blockforest/dts-converter),
-which takes TypeScript .d.ts definitions as input. [Source definition](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/cc3d223a946f661eff871787edeb0fcb8f0db156/threejs) taken from DefinitelyTyped.
+Generated with [js-facade-gen](https://github.com/dart-lang/js_facade_gen),
+which takes TypeScript .d.ts definitions as input. [THREE definition](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/three) taken from DefinitelyTyped.
 
-While Dart Analyzer reports the resulting library as free of errors, nothing except what's needed by the demo has been tested.
-The library will only be lightly maintained.
-
-# Usage
+### Usage
 
 Add a dependency in your pubspec.yaml
 
     # dependencies:
     #   threejs_facade:
-    #     git: https://github.com/blockforest/threejs-dart-facade
+    #     git: https://github.com/block-forest/threejs-dart-facade
 
-# Example
+### Examples
 
-Clone this project to run the example scene
+The [THREE Dart JS-interop Demo](http://acanvas.sounddesignz.com/dart/threejs-interop).
 
-    $> pub serve example
+Or, clone this project and run the example scene yourself:
 
-Or view [here](http://rockdot.sounddesignz.com/dart/threejs-interop).
+    $> pub global activate webdev
+    $> webdev serve example
 
-## Issues and bugs
+### Updating definitions with *dart_js_facade_gen*
 
-Please file reports on the
-[GitHub Issue Tracker](https://github.com/blockforest/threejs-dart-facade/issues).
+* Before trying this yourself, please note that generated results for three contain errors that require quite some time to go through and fix.
+* Install [dart_js_facade_gen](https://github.com/dart-lang/js_facade_gen).
+* Download https://cdn.babylonjs.com/babylon.d.ts to lib/src/babylon/
+* Run:    
+    
+        $> dart_js_facade_gen --destination=lib/src/three --basePath=lib/src/three/ three_core.d.ts
+        $> dart_js_facade_gen --destination=lib/src/three --basePath=lib/src/three/ three_example.d.ts
+        $> # and so on ...
 
