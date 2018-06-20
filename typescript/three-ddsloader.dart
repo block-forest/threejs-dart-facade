@@ -1,9 +1,9 @@
-@JS("THREE")
-library three.ddsloader;
+@JS()
+library typescript.three_ddsloader;
 
 import "package:js/js.dart";
 import "dart:html" show ImageData;
-import "three_core.dart" show CompressedTextureLoader;
+import "three-core.dart" show CompressedTextureLoader;
 
 /// https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/DDSLoader.js
 @anonymous

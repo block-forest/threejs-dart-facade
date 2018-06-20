@@ -1,5 +1,5 @@
-@JS("THREE")
-library three.core;
+@JS()
+library typescript.three_core;
 
 import "package:js/js.dart";
 import "dart:typed_data"
@@ -17,12 +17,17 @@ import "dart:typed_data"
         Float64List;
 import "package:func/func.dart";
 import "dart:html"
-    show CanvasElement, ErrorEvent, ImageData, ImageElement, MimeType, ProgressEvent, VRDisplay, VideoElement;
+    show
+        ProgressEvent,
+        ErrorEvent,
+        MimeType,
+        ImageElement,
+        CanvasElement,
+        VideoElement,
+        ImageData;
+import "dart:web_gl" show RenderingContext;
 import "dart:web_audio"
     show AudioContext, AudioBufferSourceNode, GainNode, PannerNode;
-import "dart:web_gl" show RenderingContext;
-
-
 
 @JS()
 external String get REVISION;
@@ -1016,12 +1021,12 @@ class ArrayCamera extends PerspectiveCamera {
 class BufferAttribute {
   // @Ignore
   BufferAttribute.fakeConstructor$();
-  external factory BufferAttribute(List<num> array, num itemSize,
+  external factory BufferAttribute(ArrayLike<num> array, num itemSize,
       [bool normalized]);
   external String get uuid;
   external set uuid(String v);
-  external List<num> get array;
-  external set array(List<num> v);
+  external ArrayLike<num> get array;
+  external set array(ArrayLike<num> v);
   external num get itemSize;
   external set itemSize(num v);
   external bool get JS$dynamic;
@@ -1044,7 +1049,7 @@ class BufferAttribute {
   external BufferAttribute copy(BufferAttribute source);
   external BufferAttribute copyAt(
       num index1, BufferAttribute attribute, num index2);
-  external BufferAttribute copyArray(List<num> array);
+  external BufferAttribute copyArray(ArrayLike<num> array);
   external BufferAttribute copyColorsArray(
       List<dynamic /*{r: number, g: number, b: number}*/ > colors);
   external BufferAttribute copyVector2sArray(
@@ -1053,7 +1058,7 @@ class BufferAttribute {
       List<dynamic /*{x: number, y: number, z: number}*/ > vectors);
   external BufferAttribute copyVector4sArray(
       List<dynamic /*{x: number, y: number, z: number, w: number}*/ > vectors);
-  external BufferAttribute JS$set(dynamic /*List<num>|TypedData*/ value,
+  external BufferAttribute JS$set(dynamic /*ArrayLike<num>|TypedData*/ value,
       [num offset]);
   external num getX(num index);
   external BufferAttribute setX(num index, num x);
@@ -1149,7 +1154,7 @@ class Int8BufferAttribute extends BufferAttribute {
   // @Ignore
   Int8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int8BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1158,7 +1163,7 @@ class Uint8BufferAttribute extends BufferAttribute {
   // @Ignore
   Uint8BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1167,7 +1172,7 @@ class Uint8ClampedBufferAttribute extends BufferAttribute {
   // @Ignore
   Uint8ClampedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint8ClampedBufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1176,7 +1181,7 @@ class Int16BufferAttribute extends BufferAttribute {
   // @Ignore
   Int16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int16BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1185,7 +1190,7 @@ class Uint16BufferAttribute extends BufferAttribute {
   // @Ignore
   Uint16BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint16BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1194,7 +1199,7 @@ class Int32BufferAttribute extends BufferAttribute {
   // @Ignore
   Int32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Int32BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1203,7 +1208,7 @@ class Uint32BufferAttribute extends BufferAttribute {
   // @Ignore
   Uint32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Uint32BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1212,7 +1217,7 @@ class Float32BufferAttribute extends BufferAttribute {
   // @Ignore
   Float32BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float32BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1221,7 +1226,7 @@ class Float64BufferAttribute extends BufferAttribute {
   // @Ignore
   Float64BufferAttribute.fakeConstructor$() : super.fakeConstructor$();
   external factory Float64BufferAttribute(
-      dynamic /*Iterable<num>|List<num>|ByteBuffer*/ array, num itemSize,
+      dynamic /*Iterable<num>|ArrayLike<num>|ByteBuffer*/ array, num itemSize,
       [bool normalized]);
 }
 
@@ -1782,7 +1787,7 @@ external dynamic center(dynamic geometry);
 class InstancedBufferAttribute extends BufferAttribute {
   // @Ignore
   InstancedBufferAttribute.fakeConstructor$() : super.fakeConstructor$();
-  external factory InstancedBufferAttribute(List<num> data, num itemSize,
+  external factory InstancedBufferAttribute(ArrayLike<num> data, num itemSize,
       [num meshPerAttribute]);
   external num get meshPerAttribute;
   external set meshPerAttribute(num v);
@@ -1800,7 +1805,7 @@ class InstancedBufferGeometry extends BufferGeometry {
       List<dynamic /*{start: number, count: number, instances: number}*/ > v);
   external num get maxInstancedCount;
   external set maxInstancedCount(num v);
-  external void addGroup(num start, num count, [num materialIndex]);
+  external void addGroup(num start, num count, num instances);
 }
 
 /// @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InterleavedBuffer.js">src/core/InterleavedBuffer.js</a>
@@ -1808,9 +1813,9 @@ class InstancedBufferGeometry extends BufferGeometry {
 class InterleavedBuffer {
   // @Ignore
   InterleavedBuffer.fakeConstructor$();
-  external factory InterleavedBuffer(List<num> array, num stride);
-  external List<num> get array;
-  external set array(List<num> v);
+  external factory InterleavedBuffer(ArrayLike<num> array, num stride);
+  external ArrayLike<num> get array;
+  external set array(ArrayLike<num> v);
   external num get stride;
   external set stride(num v);
   external bool get JS$dynamic;
@@ -1833,16 +1838,15 @@ class InterleavedBuffer {
   external InterleavedBuffer copy(InterleavedBuffer source);
   external InterleavedBuffer copyAt(
       num index1, InterleavedBufferAttribute attribute, num index2);
-  external InterleavedBuffer JS$set(List<num> value, num index);
+  external InterleavedBuffer JS$set(ArrayLike<num> value, num index);
 }
-
 
 /// @see <a href="https://github.com/mrdoob/three.js/blob/master/src/core/InstancedInterleavedBuffer.js">src/core/InstancedInterleavedBuffer.js</a>
 @JS()
 class InstancedInterleavedBuffer extends InterleavedBuffer {
   // @Ignore
   InstancedInterleavedBuffer.fakeConstructor$() : super.fakeConstructor$();
-  external factory InstancedInterleavedBuffer(List<num> array, num stride,
+  external factory InstancedInterleavedBuffer(ArrayLike<num> array, num stride,
       [num meshPerAttribute]);
   external num get meshPerAttribute;
   external set meshPerAttribute(num v);
@@ -2086,7 +2090,8 @@ class Object3D extends EventDispatcher {
 
   /// Updates global transform of the object and its children.
   external void updateMatrixWorld(bool force);
-  external dynamic toJSON([dynamic meta]);
+  external dynamic toJSON(
+      [dynamic /*{ geometries: any, materials: any, textures: any, images: any }*/ meta]);
   external Object3D clone([bool recursive]);
   external Object3D copy(Object3D source, [bool recursive]);
 }
@@ -2223,7 +2228,7 @@ class Light extends Object3D {
   external bool get receiveShadow;
   external set receiveShadow(bool v);
   external LightShadow get shadow;
-  external set shadow(covariant LightShadow v);
+  external set shadow(LightShadow v);
 
   /// Use shadow.camera.fov instead.
   external dynamic get shadowCameraFov;
@@ -2272,7 +2277,7 @@ class LightShadow {
   LightShadow.fakeConstructor$();
   external factory LightShadow(Camera camera);
   external Camera get camera;
-  external set camera(covariant Camera v);
+  external set camera(Camera v);
   external num get bias;
   external set bias(num v);
   external num get radius;
@@ -3087,7 +3092,7 @@ class Material extends EventDispatcher {
   external void dispose();
 
   /// Sets the properties based on the values.
-  external void setValues(covariant MaterialParameters values);
+  external void setValues(MaterialParameters values);
 
   /// Convert the material to three.js JSON format.
   external dynamic toJSON([dynamic meta]);
@@ -4139,7 +4144,7 @@ class MultiMaterial extends Material {
   external set isMultiMaterial(v);
   external List<Material> get materials;
   external set materials(List<Material> v);
-  external dynamic toJSON([dynamic meta]);
+  external dynamic toJSON(dynamic meta);
 }
 
 /// Use [MultiMaterial] instead.
@@ -4348,7 +4353,7 @@ class ShaderMaterial extends Material {
   external String get index0AttributeName;
   external set index0AttributeName(String v);
   external void setValues(ShaderMaterialParameters parameters);
-  external dynamic toJSON([dynamic meta]);
+  external dynamic toJSON(dynamic meta);
 }
 
 @JS()
@@ -4475,7 +4480,7 @@ class Box3 {
   external Vector3 get min;
   external set min(Vector3 v);
   external Box3 JS$set(Vector3 min, Vector3 max);
-  external Box3 setFromArray(List<num> array);
+  external Box3 setFromArray(ArrayLike<num> array);
   external Box3 setFromPoints(List<Vector3> points);
   external Box3 setFromCenterAndSize(Vector3 center, Vector3 size);
   external Box3 setFromObject(Object3D object);
@@ -5059,14 +5064,14 @@ abstract class Matrix {
   external Matrix identity();
 
   /// copy(m:T):T;
-  external Matrix copy(covariant Matrix m);
+  external Matrix copy(Matrix m);
 
   /// multiplyScalar(s:number):T;
   external Matrix multiplyScalar(num s);
   external num determinant();
 
   /// getInverse(matrix:T, throwOnInvertible?:boolean):T;
-  external Matrix getInverse(covariant Matrix matrix, [bool throwOnInvertible]);
+  external Matrix getInverse(Matrix matrix, [bool throwOnInvertible]);
 
   /// transpose():T;
   external Matrix transpose();
@@ -5576,19 +5581,19 @@ abstract class Vector {
   external num getComponent(num index);
 
   /// copy(v:T):T;
-  external Vector copy(covariant Vector v);
+  external Vector copy(Vector v);
 
   /// add(v:T):T;
-  external Vector add(covariant Vector v);
+  external Vector add(Vector v);
 
   /// addVectors(a:T, b:T):T;
-  external Vector addVectors(covariant Vector a, covariant Vector b);
+  external Vector addVectors(Vector a, Vector b);
 
   /// sub(v:T):T;
-  external Vector sub(covariant Vector v);
+  external Vector sub(Vector v);
 
   /// subVectors(a:T, b:T):T;
-  external Vector subVectors(covariant Vector a, covariant Vector b);
+  external Vector subVectors(Vector a, Vector b);
 
   /// multiplyScalar(s:number):T;
   external Vector multiplyScalar(num s);
@@ -5600,7 +5605,7 @@ abstract class Vector {
   external Vector negate();
 
   /// dot(v:T):T;
-  external num dot(covariant Vector v);
+  external num dot(Vector v);
 
   /// lengthSq():number;
   external num lengthSq();
@@ -5613,20 +5618,20 @@ abstract class Vector {
 
   /// NOTE: Vector4 doesn't have the property.
   /// distanceTo(v:T):number;
-  external num distanceTo(covariant Vector v);
+  external num distanceTo(Vector v);
 
   /// NOTE: Vector4 doesn't have the property.
   /// distanceToSquared(v:T):number;
-  external num distanceToSquared(covariant Vector v);
+  external num distanceToSquared(Vector v);
 
   /// setLength(l:number):T;
   external Vector setLength(num l);
 
   /// lerp(v:T, alpha:number):T;
-  external Vector lerp(covariant Vector v, num alpha);
+  external Vector lerp(Vector v, num alpha);
 
   /// equals(v:T):boolean;
-  external bool equals(covariant Vector v);
+  external bool equals(Vector v);
 
   /// clone():T;
   external Vector clone();
@@ -6081,12 +6086,6 @@ class Vector4 implements Vector {
   external List<num> toArray([List<num> xyzw, num offset]);
   external Vector4 fromBufferAttribute(BufferAttribute attribute, num index,
       [num offset]);
-
-  @override
-  external num distanceTo(Vector v);
-
-  @override
-  external num distanceToSquared(Vector v);
 }
 
 @JS()
@@ -6173,7 +6172,7 @@ class LOD extends Object3D {
   external Object3D getObjectForDistance(num distance);
   external void raycast(Raycaster raycaster, dynamic intersects);
   external void update(Camera camera);
-  external dynamic toJSON([dynamic meta]);
+  external dynamic toJSON(dynamic meta);
 
   /// Use [LOD#levels .levels] instead.
   external List<dynamic> get objects;
@@ -6237,12 +6236,8 @@ class LensFlare extends Object3D {
   external set customUpdateCallback(VoidFunc1<LensFlare> v);
   /*external void add(Object3D object);*/
   /*external void add(Texture texture, [num size, num distance, enum Blending blending, Color color]);*/
-  external void add(
-      [Object3D object1,
-        Object3D object2,
-        Object3D object3,
-        Object3D object4,
-        Object3D object5]);
+  external void add(dynamic /*Object3D|Texture*/ object_texture,
+      [num size, num distance, num /*enum Blending*/ blending, Color color]);
   external void updateLensFlares();
 }
 
@@ -8134,7 +8129,7 @@ class DataTexture extends Texture {
       num anisotropy,
       num /*enum TextureEncoding*/ encoding]);
   external ImageData get image;
-  external set image(dynamic v);
+  external set image(ImageData v);
 }
 
 @JS()
@@ -8268,7 +8263,7 @@ class AudioAnalyser {
 }
 
 @JS()
-external AudioContext get audioContext;
+external AudioContext get AudioContext;
 
 @JS()
 class AudioBuffer {
@@ -8389,7 +8384,7 @@ class CurvePath<T extends Vector> extends Curve<T> {
   external void add(Curve<T> curve);
   external bool checkConnection();
   external void closePath();
-  external T getPoint(num t, [T optionalTarget]);
+  external T getPoint(num t);
   external num getLength();
   external void updateArcLengths();
   external List<num> getCurveLengths();
@@ -8520,7 +8515,7 @@ class CatmullRomCurve3 extends Curve<Vector3> {
       [List<Vector3> points, bool closed, String curveType, num tension]);
   external List<Vector3> get points;
   external set points(List<Vector3> v);
-  external Vector3 getPoint(num t, [Vector3 optionalTarget]);
+  external Vector3 getPoint(num t);
 }
 
 @JS()
@@ -8553,7 +8548,7 @@ class CubicBezierCurve3 extends Curve<Vector3> {
   external set v2(Vector3 v);
   external Vector3 get v3;
   external set v3(Vector3 v);
-  external Vector3 getPoint(num t, [Vector3 optionalTarget]);
+  external Vector3 getPoint(num t);
 }
 
 @JS()
@@ -8608,7 +8603,7 @@ class LineCurve3 extends Curve<Vector3> {
   external set v1(Vector3 v);
   external Vector3 get v2;
   external set v2(Vector3 v);
-  external Vector3 getPoint(num t, [Vector3 optionalTarget]);
+  external Vector3 getPoint(num t);
 }
 
 @JS()
@@ -8635,7 +8630,7 @@ class QuadraticBezierCurve3 extends Curve<Vector3> {
   external set v1(Vector3 v);
   external Vector3 get v2;
   external set v2(Vector3 v);
-  external Vector3 getPoint(num t, [Vector3 optionalTarget]);
+  external Vector3 getPoint(num t);
 }
 
 @JS()

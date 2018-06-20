@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.tgaloader;
+@JS()
+library typescript.three_tgaloader;
 
 import "package:js/js.dart";
-import "three_core.dart" show LoadingManager, Texture;
+import "three-core.dart" show LoadingManager, Texture;
 import "dart:html" show ProgressEvent, ErrorEvent;
 
 /// https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/TGALoader.js

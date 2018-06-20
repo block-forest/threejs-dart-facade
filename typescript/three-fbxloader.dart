@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.fbxloader;
+@JS()
+library typescript.three_fbxloader;
 
 import "package:js/js.dart";
-import "three_core.dart" show LoadingManager, Group;
+import "three-core.dart" show LoadingManager, Group;
 import "dart:html" show ProgressEvent, ErrorEvent;
 
 /// https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/FBXLoader.js

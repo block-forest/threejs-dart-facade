@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.shaderpass;
+@JS()
+library typescript.three_shaderpass;
 
 import "package:js/js.dart";
-import "three_core.dart"
+import "three-core.dart"
     show
         Shader,
         ShaderMaterial,

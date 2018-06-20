@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.colladaLoader;
+@JS()
+library typescript.three_colladaLoader;
 
 import "package:js/js.dart";
-import "three_core.dart" show Scene;
+import "three-core.dart" show Scene;
 import "dart:html" show ProgressEvent, ErrorEvent;
 
 @anonymous

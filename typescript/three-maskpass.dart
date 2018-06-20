@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.maskpass;
+@JS()
+library typescript.three_maskpass;
 
 import "package:js/js.dart";
-import "three_core.dart" show Scene, Camera, WebGLRenderer, WebGLRenderTarget;
+import "three-core.dart" show Scene, Camera, WebGLRenderer, WebGLRenderTarget;
 
 @JS()
 class MaskPass {

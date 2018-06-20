@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.copyshader;
+@JS()
+library typescript.three_copyshader;
 
 import "package:js/js.dart";
-import "three_core.dart" show Shader;
+import "three-core.dart" show Shader;
 
 @JS()
 external Shader get CopyShader;

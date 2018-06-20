@@ -1,16 +1,15 @@
-@JS("THREE")
-library three.orthographictrackballcontrols;
+@JS()
+library typescript.three_trackballcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show EventDispatcher, Camera, Vector3;
+import "three-core.dart" show EventDispatcher, Camera, Vector3;
 import "dart:html" show HtmlElement;
 
 @JS()
-class OrthographicTrackballControls extends EventDispatcher {
+class TrackballControls extends EventDispatcher {
   // @Ignore
-  OrthographicTrackballControls.fakeConstructor$() : super.fakeConstructor$();
-  external factory OrthographicTrackballControls(Camera object,
-      [HtmlElement domElement]);
+  TrackballControls.fakeConstructor$() : super.fakeConstructor$();
+  external factory TrackballControls(Camera object, [HtmlElement domElement]);
   external Camera get object;
   external set object(Camera v);
   external HtmlElement get domElement;
@@ -22,8 +21,6 @@ class OrthographicTrackballControls extends EventDispatcher {
   external dynamic /*{left: number; top: number; width: number; height: number}*/ get screen;
   external set screen(
       dynamic /*{left: number; top: number; width: number; height: number}*/ v);
-  external num get radius;
-  external set radius(num v);
   external num get rotateSpeed;
   external set rotateSpeed(num v);
   external num get zoomSpeed;
@@ -42,6 +39,10 @@ class OrthographicTrackballControls extends EventDispatcher {
   external set staticMoving(bool v);
   external num get dynamicDampingFactor;
   external set dynamicDampingFactor(num v);
+  external num get minDistance;
+  external set minDistance(num v);
+  external num get maxDistance;
+  external set maxDistance(num v);
   external List<num> get keys;
   external set keys(List<num> v);
   external Vector3 get target;
@@ -52,16 +53,9 @@ class OrthographicTrackballControls extends EventDispatcher {
   external set target0(Vector3 v);
   external Vector3 get up0;
   external set up0(Vector3 v);
-  external num get left0;
-  external set left0(num v);
-  external num get right0;
-  external set right0(num v);
-  external num get top0;
-  external set top0(num v);
-  external num get bottom0;
-  external set bottom0(num v);
   external void update();
   external void reset();
+  external void dispose();
   external void checkDistances();
   external void zoomCamera();
   external void panCamera();

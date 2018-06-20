@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.octree;
+@JS()
+library typescript.three_octree;
 
 import "package:js/js.dart";
-import "three_core.dart" show Vector3;
+import "three-core.dart" show Vector3;
 
 @JS()
 class Octree {

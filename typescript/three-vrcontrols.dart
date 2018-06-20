@@ -1,10 +1,8 @@
-@JS("THREE")
-library three.vrcontrols;
-
-import 'dart:html';
+@JS()
+library typescript.three_vrcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show Camera;
+import "three-core.dart" show Camera;
 
 /// <reference types="webvr-api" />
 @JS()

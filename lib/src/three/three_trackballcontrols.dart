@@ -1,4 +1,4 @@
-@JS()
+@JS("THREE")
 library three.trackballcontrols;
 
 import "package:js/js.dart";

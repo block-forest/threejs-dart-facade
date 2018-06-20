@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.mtlloader;
+@JS()
+library typescript.three_mtlloader;
 
 import "package:js/js.dart";
-import "three_core.dart"
+import "three-core.dart"
     show EventDispatcher, LoadingManager, Material, Texture, BufferGeometry;
 import "dart:html" show ProgressEvent, ErrorEvent;
 

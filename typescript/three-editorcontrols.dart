@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.editorcontrols;
+@JS()
+library typescript.three_editorcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show EventDispatcher, Camera, Vector3, Object3D;
+import "three-core.dart" show EventDispatcher, Camera, Vector3, Object3D;
 import "dart:html" show HtmlElement;
 
 @JS()

@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.ctmloader;
+@JS()
+library typescript.three_ctmloader;
 
 import "package:js/js.dart";
-import "three_core.dart" show Loader;
+import "three-core.dart" show Loader;
 
 @JS()
 class CTMLoader extends Loader {

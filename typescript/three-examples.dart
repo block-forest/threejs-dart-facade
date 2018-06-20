@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.examples;
+@JS()
+library typescript.three_examples;
 
 import "package:js/js.dart";
-import "three_core.dart" show Shader;
+import "three-core.dart" show Shader;
 
 /// Things from three.js/examples/ that do not (yet) have their own file
 @JS()

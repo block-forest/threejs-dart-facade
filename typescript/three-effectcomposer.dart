@@ -1,9 +1,9 @@
-@JS("THREE")
-library three.effectcomposer;
+@JS()
+library typescript.three_effectcomposer;
 
 import "package:js/js.dart";
-import "three_core.dart" show WebGLRenderer, WebGLRenderTarget;
-import "three_shaderpass.dart" show ShaderPass;
+import "three-core.dart" show WebGLRenderer, WebGLRenderTarget;
+import "three-shaderpass.dart" show ShaderPass;
 
 @JS()
 class EffectComposer {

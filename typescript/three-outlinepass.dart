@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.outlinepass;
+@JS()
+library typescript.three_outlinepass;
 
 import "package:js/js.dart";
-import "three_core.dart" show Vector2, Scene, Camera, Object3D, Color;
+import "three-core.dart" show Vector2, Scene, Camera, Object3D, Color;
 
 @JS()
 class OutlinePass {

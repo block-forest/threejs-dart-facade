@@ -1,5 +1,5 @@
-@JS("THREE")
-library three.smaapass;
+@JS()
+library typescript.three_smaapass;
 
 import "package:js/js.dart";
 

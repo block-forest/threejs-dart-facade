@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.FirstPersonControls;
+@JS()
+library typescript.three_FirstPersonControls;
 
 import "package:js/js.dart";
-import "three_core.dart" show Camera, Object3D, Vector3;
+import "three-core.dart" show Camera, Object3D, Vector3;
 import "dart:html" show HtmlElement, CanvasElement, HtmlDocument;
 
 @JS()

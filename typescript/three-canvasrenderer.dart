@@ -1,9 +1,9 @@
-@JS("THREE")
-library three.canvasrenderer;
+@JS()
+library typescript.three_canvasrenderer;
 
 import "package:js/js.dart";
-import "three_core.dart"
-    show Camera, Color, Material, MaterialParameters, Plane, Renderer, Scene;
+import "three-core.dart"
+    show MaterialParameters, Color, Material, Renderer, Scene, Camera;
 import "package:func/func.dart";
 import "dart:html" show CanvasRenderingContext2D, CanvasElement;
 

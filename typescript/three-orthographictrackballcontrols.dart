@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.orthographictrackballcontrols;
+@JS()
+library typescript.three_orthographictrackballcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show EventDispatcher, Camera, Vector3;
+import "three-core.dart" show EventDispatcher, Camera, Vector3;
 import "dart:html" show HtmlElement;
 
 @JS()

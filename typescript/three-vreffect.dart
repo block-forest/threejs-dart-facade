@@ -1,10 +1,8 @@
-@JS("THREE")
-library three.vreffect;
-
-import 'dart:html';
+@JS()
+library typescript.three_vreffect;
 
 import "package:js/js.dart";
-import "three_core.dart" show Renderer, Scene, Camera, Matrix4;
+import "three-core.dart" show Renderer, Scene, Camera, Matrix4;
 
 /// <reference types="webvr-api" />
 @JS()
@@ -21,8 +19,7 @@ class VREffect {
       VRFov fov, bool rightHanded, num zNear, num zFar);
   external Matrix4 FovToProjection(
       VRFov fov, bool rightHanded, num zNear, num zFar);
-  external dynamic toJSON(
-      [dynamic /*{ geometries: any, materials: any, textures: any, images: any }*/ meta]);
+  external void setVRDisplay(VRDisplay display);
 }
 
 @anonymous

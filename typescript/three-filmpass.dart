@@ -1,9 +1,9 @@
-@JS("THREE")
-library three.filmpass;
+@JS()
+library typescript.three_filmpass;
 
 import "package:js/js.dart";
-import "three_effectcomposer.dart" show Pass;
-import "three_core.dart" show Scene, Camera, IUniform, Material, Mesh;
+import "three-effectcomposer.dart" show Pass;
+import "three-core.dart" show Scene, Camera, IUniform, Material, Mesh;
 
 @JS()
 class FilmPass extends Pass {

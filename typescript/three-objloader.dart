@@ -1,10 +1,10 @@
-@JS("THREE")
-library three.objloader;
+@JS()
+library typescript.three_objloader;
 
 import "package:js/js.dart";
-import "three_core.dart" show LoadingManager, Material, Group;
+import "three-core.dart" show LoadingManager, Material, Group;
 import "dart:html" show ProgressEvent, ErrorEvent;
-import "three_mtlloader.dart" show MaterialCreator;
+import "three-mtlloader.dart" show MaterialCreator;
 
 /// https://github.com/mrdoob/three.js/blob/master/examples/js/loaders/OBJLoader.js
 @JS()

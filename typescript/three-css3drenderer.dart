@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.css3drenderer;
+@JS()
+library typescript.three_css3drenderer;
 
 import "package:js/js.dart";
-import "three_core.dart" show Object3D, Scene, Camera;
+import "three-core.dart" show Object3D, Scene, Camera;
 import "dart:html" show HtmlElement;
 
 @JS()

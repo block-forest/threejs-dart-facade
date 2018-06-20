@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.projector;
+@JS()
+library typescript.three_projector;
 
 import "package:js/js.dart";
-import "three_core.dart"
+import "three-core.dart"
     show Vector3, Color, Material, Vector2, Vector4, Camera, Scene;
 
 /// Renderers / Renderables /////////////////////////////////////////////////////////////////////

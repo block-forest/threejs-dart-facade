@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.orbitcontrols;
+@JS()
+library typescript.three_orbitcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show Camera, Vector3;
+import "three-core.dart" show Camera, Vector3;
 import "dart:html" show HtmlElement, HtmlDocument;
 
 @JS()

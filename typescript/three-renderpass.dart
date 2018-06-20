@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.renderpass;
+@JS()
+library typescript.three_renderpass;
 
 import "package:js/js.dart";
-import "three_core.dart"
+import "three-core.dart"
     show Scene, Camera, Material, Color, WebGLRenderer, WebGLRenderTarget;
 
 @JS()

@@ -1,8 +1,8 @@
-@JS("THREE")
-library three.transformcontrols;
+@JS()
+library typescript.three_transformcontrols;
 
 import "package:js/js.dart";
-import "three_core.dart" show Object3D, Camera;
+import "three-core.dart" show Object3D, Camera;
 import "dart:html" show HtmlElement;
 
 @JS()
