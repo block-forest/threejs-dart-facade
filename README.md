@@ -1,6 +1,6 @@
 # threejs Dart Facade
 
-This is a Dart-JS interop facade for the THREE.js 3D library. 
+This is a Dart-JS interop facade for the THREE.js 3D library (version r92). 
 
 Generated with [js-facade-gen](https://github.com/dart-lang/js_facade_gen),
 which takes TypeScript .d.ts definitions as input. [THREE definition](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/three) taken from DefinitelyTyped.
