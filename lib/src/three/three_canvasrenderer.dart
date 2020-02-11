@@ -4,7 +4,7 @@ library three.canvasrenderer;
 import "package:js/js.dart";
 import "three_core.dart"
     show Camera, Color, Material, MaterialParameters, Plane, Renderer, Scene;
-import "package:func/func.dart";
+import "package:func2/func.dart";
 import "dart:html" show CanvasRenderingContext2D, CanvasElement;
 
 @anonymous
