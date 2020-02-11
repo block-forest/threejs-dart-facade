@@ -15,7 +15,7 @@ import "dart:typed_data"
         Int32List,
         Uint32List,
         Float64List;
-import "package:func/func.dart";
+import "package:func2/func.dart";
 import "dart:html"
     show CanvasElement, ErrorEvent, ImageData, ImageElement, MimeType, ProgressEvent, VRDisplay, VideoElement;
 import "dart:web_audio"
